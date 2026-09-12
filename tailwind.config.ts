@@ -1,0 +1,67 @@
+import type { Config } from "tailwindcss";
+
+export default {
+  content: ["./src/**/*.{js,ts,jsx,tsx,mdx}"],
+  darkMode: "class",
+  theme: {
+    extend: {
+      colors: {
+        background: "hsl(var(--background))",
+        foreground: "hsl(var(--foreground))",
+        card: "hsl(var(--card))",
+        "card-foreground": "hsl(var(--card-foreground))",
+        popover: "hsl(var(--popover))",
+        "popover-foreground": "hsl(var(--popover-foreground))",
+        primary: "hsl(var(--primary))",
+        "primary-foreground": "hsl(var(--primary-foreground))",
+        secondary: "hsl(var(--secondary))",
+        "secondary-foreground": "hsl(var(--secondary-foreground))",
+        muted: "hsl(var(--muted))",
+        "muted-foreground": "hsl(var(--muted-foreground))",
+        accent: "hsl(var(--accent))",
+        "accent-foreground": "hsl(var(--accent-foreground))",
+        destructive: "hsl(var(--destructive))",
+        "destructive-foreground": "hsl(var(--destructive-foreground))",
+        success: "hsl(var(--success))",
+        "success-foreground": "hsl(var(--success-foreground))",
+        warning: "hsl(var(--warning))",
+        "warning-foreground": "hsl(var(--warning-foreground))",
+        border: "hsl(var(--border))",
+        input: "hsl(var(--input))",
+        ring: "hsl(var(--ring))",
+        sidebar: "hsl(var(--sidebar))",
+        "sidebar-foreground": "hsl(var(--sidebar-foreground))",
+        "sidebar-border": "hsl(var(--sidebar-border))",
+        "sidebar-accent": "hsl(var(--sidebar-accent))",
+      },
+      borderRadius: {
+        lg: "var(--radius)",
+        md: "calc(var(--radius) - 2px)",
+        sm: "calc(var(--radius) - 4px)",
+      },
+      fontFamily: {
+        sans: ["var(--font-inter)", "ui-sans-serif", "system-ui", "sans-serif"],
+        mono: ["var(--font-mono)", "ui-monospace", "monospace"],
+      },
+      boxShadow: {
+        card: "0 1px 3px 0 hsl(var(--shadow-rgb) / 0.04), 0 1px 2px -1px hsl(var(--shadow-rgb) / 0.04)",
+        "card-hover": "0 4px 12px 0 hsl(var(--shadow-rgb) / 0.08), 0 2px 4px -1px hsl(var(--shadow-rgb) / 0.06)",
+        soft: "0 2px 8px -2px hsl(var(--shadow-rgb) / 0.06)",
+        popover: "0 10px 30px -10px hsl(var(--shadow-rgb) / 0.15)",
+      },
+      animation: {
+        "fade-in": "fadeIn 0.3s ease-out",
+        "slide-up": "slideUp 0.3s ease-out",
+        "slide-right": "slideRight 0.2s ease-out",
+        shimmer: "shimmer 2s infinite linear",
+      },
+      keyframes: {
+        fadeIn: { "0%": { opacity: "0" }, "100%": { opacity: "1" } },
+        slideUp: { "0%": { opacity: "0", transform: "translateY(8px)" }, "100%": { opacity: "1", transform: "translateY(0)" } },
+        slideRight: { "0%": { opacity: "0", transform: "translateX(-8px)" }, "100%": { opacity: "1", transform: "translateX(0)" } },
+        shimmer: { "0%": { backgroundPosition: "-1000px 0" }, "100%": { backgroundPosition: "1000px 0" } },
+      },
+    },
+  },
+  plugins: [],
+} satisfies Config;
